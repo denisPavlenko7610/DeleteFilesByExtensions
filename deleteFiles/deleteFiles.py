@@ -1,11 +1,11 @@
-import os
-import glob
+import os, glob
 
 deletedCount = 0
 isStop = False
 
 
 dir = input('Enter path: ')
+dir = dir.replace('[', '[[]')
 dir = dir[1:-1]
 
 while isStop == False:
