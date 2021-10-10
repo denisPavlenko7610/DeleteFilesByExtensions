@@ -9,16 +9,16 @@ dir = dir[1:-1]
 
 while isStop == False:
     print()
-    extension = input('Enter extention: [default - srt]: \n')
-    if extension == '':
-        extension = 'srt'
-
-    filelist = glob.glob(os.path.join(dir, "*." + extension))
-
-    for f in filelist:
-        os.remove(f)
-        deletedCount += 1
-
+    extentions = input('Enter extention: [default - srt, html, txt, zip, vtt, js, css]: ')
+    print()
+    if extentions == '':
+        extentions = ['srt','html','txt','zip','vtt','js','css']
+    
+    for ext in extentions:
+        filelist = glob.glob(os.path.join(dir, "*." + ext))     
+        for f in filelist:
+            os.remove(f)
+            deletedCount += 1
 
     print(f'deleted: {deletedCount} files \n')
     questionToStop = input('You want to delete someone else?.. [Y/N] ')
