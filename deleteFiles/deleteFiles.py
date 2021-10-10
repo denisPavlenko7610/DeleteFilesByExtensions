@@ -9,11 +9,12 @@ dir = dir[1:-1]
 
 while isStop == False:
     print()
-    extentions = input('Enter extention: [default - srt, html, txt, zip, vtt, js, css]: ')
+    extentions = input('Enter extention: [default - srt, html, txt, zip, vtt, js, css, pdf]: ')
     print()
     if extentions == '':
-        extentions = ['srt','html','txt','zip','vtt','js','css']
-    
+        extentions = ['srt','html','txt','zip','vtt','js','css','pdf']
+    else:
+        extentions = extentions.split()
     for ext in extentions:
         filelist = glob.glob(os.path.join(dir, "*." + ext))     
         for f in filelist:
