@@ -9,10 +9,10 @@ dir = dir[1:-1]
 
 while isStop == False:
     print()
-    extentions = input('Enter extention: [default - srt, html, txt, zip, vtt, js, css, pdf]: ')
+    extentions = input('Enter extention: [default - srt, html, txt, zip, vtt, js, css, pdf, svg, png]: ')
     print()
     if extentions == '':
-        extentions = ['srt','html','txt','zip','vtt','js','css','pdf']
+        extentions = ['srt','html','txt','zip','vtt','js','css','pdf','svg','png']
     else:
         extentions = extentions.split()
     for ext in extentions:
